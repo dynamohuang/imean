@@ -1,7 +1,28 @@
 {
-	"name":"imean",
-	"version":"0.1.0",
-	"dependencies":{
-		"express":"*"
-	}
+  "name": "imean",
+  "version": "0.1.0",
+  "dependencies": {
+    "express": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "A website cms  based by  mongodb  express  agularJS  nodejs. And based by mvc  pattern.",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dinglehuang/imean.git"
+  },
+  "keywords": [
+    "mean",
+    "mvc",
+    "cms"
+  ],
+  "author": "dinglehuang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinglehuang/imean/issues"
+  },
+  "homepage": "https://github.com/dinglehuang/imean"
 }
