@@ -1,3 +1,6 @@
 exports.render = function(req,res){
-     res.send("Hello dinglehuang!");
+ res.render('index', {
+ title: 'Hello imean'
+ });
 };
+
