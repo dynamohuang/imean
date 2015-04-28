@@ -1,0 +1,7 @@
+{
+	"name":"imean",
+	"version":"0.1.0",
+	"dependencies":{
+		"express":"*"
+	}
+}
