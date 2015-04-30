@@ -4,7 +4,9 @@
   "dependencies": {
     "express": "*",
     "ejs":"*",
-    "express-session":"*"
+    "express-session":"*",
+    "body-parser":"*",
+    "mongoose":"*"
   },
   "scripts": {
     "start": "node server.js"
