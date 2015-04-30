@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "dependencies": {
     "express": "*",
-    "ejs":"*"
+    "ejs":"*",
+    "express-session":"*"
   },
   "scripts": {
     "start": "node server.js"
