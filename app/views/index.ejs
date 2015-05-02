@@ -5,6 +5,13 @@
  </head>
  <body>
  <h1><%= title %></h1>
+ <% if ( username ) { %>
+ <h2>Welcome <%=username%> </h2>
+ <a href="/signout">Sign out</a>
+ <% } else { %>
+ <a href="/signup">Signup</a>
+ <a href="/signin">Signin</a>
+ <% } %>
  <img src="img/gril.jpg" alt="Chinese beautiful gril">
  </body>
 </html>

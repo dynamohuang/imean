@@ -6,7 +6,10 @@
     "ejs":"*",
     "express-session":"*",
     "body-parser":"*",
-    "mongoose":"*"
+    "mongoose":"*",
+    "passport":"*",
+    "passport-local":"*",
+    "connect-flash":"*"
   },
   "scripts": {
     "start": "node server.js"
