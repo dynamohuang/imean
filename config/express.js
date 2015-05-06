@@ -22,6 +22,7 @@ module.exports = function() {
  })) ;
  require('../app/routes/index.server.routes.js')(app);
  require('../app/routes/users.server.routes.js')(app);
+ require('../app/routes/cms.server.routes.js')(app);
  app.use(express.static('./public'));
  return app;
 };

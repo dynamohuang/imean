@@ -1,0 +1,7 @@
+{
+ "name": "imean",
+ "version":"0.0.7",
+ "dependencies": {
+     "angular":"~1.2"
+ }
+}

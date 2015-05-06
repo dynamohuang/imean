@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
  <head>
  <title><%= title %></title>
  </head>
  <body>
  <h1><%= title %></h1>
+ <section ng-include="'example/views/example.client.view.html'"></section>
  <% if ( username ) { %>
- <h2>Welcome <%=username%> </h2>
+ <h2>Welcome, <%=username%> </h2>
  <a href="/signout">Sign out</a>
  <% } else { %>
  <a href="/signup">Signup</a>
@@ -14,4 +15,6 @@
  <% } %>
  <img src="img/gril.jpg" alt="Chinese beautiful gril">
  </body>
+ <script type="text/javascript" src="/lib/angular/angular.js"></script>
+ <script type="text/javascript" src="/example/example.client.module.js"></script>
 </html>
