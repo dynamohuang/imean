@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+	    <div class="col-md-3">
+	        <div>
+				<div class="row">
+				    <div class="col-md-12 row">
+				        <div class="list-group">
+				            <a href="javascript:void(0);" class="list-group-item active">
+								用户类型
+				            </a>
+				            <a ui-sref="index.usermng.list({type:0})" class="list-group-item">全部</a>
+				            <a ui-sref="index.usermng.list({type:1})" class="list-group-item">超级管理员</a>
+				            <a ui-sref="index.usermng.list({type:2})" class="list-group-item">内容管理员</a>
+				            <a ui-sref="index.usermng.list({type:3})" class="list-group-item">会员用户</a>
+				            <a ui-sref="index.usermng.list({type:4})" class="list-group-item">普通用户</a>
+				        </div>
+				        <a ui-sref="index.usermng.add"><img class="add-icon" src="./cms/image/add.png"></a>
+				    </div>
+				</div>
+	        </div>
+	    </div>
+	    <div class="col-md-9 row">
+	        <div ui-view>
+	        	列表加载中...
+	        </div>
+	    </div>
+	</div>
+</div>

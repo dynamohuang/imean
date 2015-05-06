@@ -1,4 +1,4 @@
-var routerApp = angular.module('routerApp', ['ui.router', 'ngGrid', 'BookListModule', 'BookDetailModule']);
+var routerApp = angular.module('routerApp', ['ui.router', 'ngGrid', 'BookListModule', 'usermngModule']);
 /**
  * 由于整个应用都会和路由打交道，所以这里把$state和$stateParams这两个对象放到$rootScope上，方便其它地方引用和注入。
  * 这里的run方法只会在angular启动的时候运行一次。
@@ -29,6 +29,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        /*用户管理*/
         .state('login', {
 	        url: '/login',
 	        views: {
@@ -44,35 +45,21 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/usermng',
             views: {
                 'main@index': {
-                    templateUrl: 'cms/tpls/usermng.html',
-                    controller: function($scope, $state) {
-                        $scope.addUserType = function() {
-                            $state.go("index.usermng.addusertype");
-                        }
-                    }
+                    templateUrl: 'cms/tpls/usermng/index.html'
                 }
             }
         })
-        .state('index.usermng.highendusers', {
-            url: '/highendusers',
-            templateUrl: 'cms/tpls/highendusers.html'
+        .state('index.usermng.list', {
+            url: '/list/{type:[0-9]{0,4}}',
+            templateUrl: 'cms/tpls/usermng/grid.html'
         })
-        .state('index.usermng.normalusers', {
-            url: '/normalusers',
-            templateUrl: 'cms/tpls/normalusers.html'
+        .state('index.usermng.add', {
+            url: '/add',
+            templateUrl: 'cms/tpls/usermng/add.html'
         })
-        .state('index.usermng.lowusers', {
-            url: '/lowusers',
-            templateUrl: 'cms/tpls/lowusers.html'
-        })
-        .state('index.usermng.addusertype', {
-            url: '/addusertype',
-            templateUrl: 'cms/tpls/addusertypeform.html',
-            controller: function($scope, $state) {
-                $scope.backToPrevious = function() {
-                    window.history.back();
-                }
-            }
+        .state('index.usermng.detail', {
+            url: '/detail/:id', //注意这里在路由中传参数的方式
+            templateUrl: 'cms/tpls/usermng/detail.html'
         })
         .state('index.permission', {
             url: '/permission',
